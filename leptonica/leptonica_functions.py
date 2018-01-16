@@ -5,6 +5,12 @@ import ctypes
 from leptonica_structures import *
 import leptonica_structures as structs
 
+
+# hide warnings
+import os, StringIO
+os.stderr = StringIO.StringIO()
+
+
 try:
     leptonica = ctypes.cdll.LoadLibrary("liblept.so")
     libc = ctypes.cdll.LoadLibrary("libc.so.6")
